@@ -14,13 +14,13 @@ export default function Server({ status, players }) {
 }
 
 export async function getServerSideProps(ctx) {
-  let rawData = await fetch(`https://api.mcsrvstat.us/2/${ip}`);
+  let rawData = await fetch(`https://api.minetools.eu/ping/${ip}`);
   let parsedData = await rawData.json();
 
   return {
     props: {
-      status: parsedData.online ? "online" : "offline",
-      players: parsedData.players?.list ?? [],
+      status: parsedData.error ? "offline" : "online",
+      players: Object.values(parsedData.players.sample).map((x) => x.name),
     },
   };
 }
