@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Navbar({ setTheme, isLightTheme }) {
+export default function Navbar({ setTheme, theme }) {
   const classes = useStyles();
 
   return (
@@ -44,9 +44,9 @@ export default function Navbar({ setTheme, isLightTheme }) {
             edge="end"
             className={classes.menuButton}
             color="inherit"
-            onClick={() => setTheme(!isLightTheme)}
+            onClick={() => setTheme(!theme)}
           >
-            {isLightTheme ? <Brightness7Icon /> : <Brightness4Icon />}
+            {theme ? <Brightness7Icon /> : <Brightness4Icon />}
           </IconButton>
         </Toolbar>
       </AppBar>
