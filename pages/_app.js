@@ -3,6 +3,17 @@ import Head from "next/head";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Navbar from "../components/Navbar";
 import Providers from "../components/Providers";
+import Router from "next/router";
+import NProgress from "nprogress";
+import "../styles/nprogress.css";
+
+// https://stackoverflow.com/a/62840660, very nice
+Router.events.on("routeChangeStart", (url) => {
+  console.log(`Loading: ${url}`);
+  NProgress.start();
+});
+Router.events.on("routeChangeComplete", () => NProgress.done());
+Router.events.on("routeChangeError", () => NProgress.done());
 
 export default function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState(undefined); // true => light; false => dark
