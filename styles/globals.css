@@ -1,0 +1,16 @@
+img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+a {
+  color: #00bcd4;
+}
+
+::selection {
+  background: #00bcd4;
+}
+::-moz-selection {
+  background: #00bcd4;
+}

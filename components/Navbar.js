@@ -35,6 +35,11 @@ export default function Navbar({ setTheme, theme }) {
               <Typography variant="h4">Atlas</Typography>
             </Button>
           </Link>
+          <Link href="/guides">
+            <Button color="inherit">
+              <Typography variant="h5">Guides</Typography>
+            </Button>
+          </Link>
           <Link href="/server">
             <Button color="inherit" className={classes.leftEnd}>
               <Typography variant="h5">Server</Typography>

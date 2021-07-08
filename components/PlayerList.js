@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Avatar from "@material-ui/core/Avatar";
@@ -35,9 +35,9 @@ export default function PlayerList({ players }) {
       <Box className={classes.list}>
         <List>
           {players.map((username, index) => (
-            <>
+            <React.Fragment key={username}>
               {index !== 0 ? <Divider /> : null}
-              <ListItem key={index}>
+              <ListItem>
                 <ListItemAvatar>
                   <Avatar
                     variant="rounded"
@@ -47,7 +47,7 @@ export default function PlayerList({ players }) {
                 </ListItemAvatar>
                 <ListItemText primary={username} />
               </ListItem>
-            </>
+            </React.Fragment>
           ))}
         </List>
       </Box>

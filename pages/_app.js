@@ -6,6 +6,7 @@ import Providers from "../components/Providers";
 import Router from "next/router";
 import NProgress from "nprogress";
 import "../styles/nprogress.css";
+import "../styles/globals.css";
 
 // https://stackoverflow.com/a/62840660, very nice
 Router.events.on("routeChangeStart", (url) => {
