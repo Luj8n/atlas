@@ -1,4 +1,4 @@
-This is a website made for (saltAxAtlas)[https://www.twitch.tv/saltaxatlas] and other code streamer communities
+This is a website made for [saltAxAtlas](https://www.twitch.tv/saltaxatlas) and other code streamer communities
 
 It shows the status of the modded minecraft server (later maybe not only minecraft). There is also a section for game/modpack guides.
 
