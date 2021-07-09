@@ -46,7 +46,7 @@ export async function getServerSideProps(ctx) {
   return {
     props: {
       status: parsedData.error ? "offline" : "online",
-      players: Object.values(parsedData.players.sample).map((x) => x.name),
+      players: parsedData.error ? [] : Object.values(parsedData.players.sample).map((x) => x.name),
     },
   };
 }
