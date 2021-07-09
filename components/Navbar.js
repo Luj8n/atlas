@@ -6,14 +6,12 @@ import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import Brightness7Icon from "@material-ui/icons/Brightness7";
 import Brightness4Icon from "@material-ui/icons/Brightness4";
+import GitHubIcon from "@material-ui/icons/GitHub";
 import Link from "next/link";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-  },
-  themeButton: {
-    marginLeft: theme.spacing(2),
   },
   leftEnd: {
     marginRight: "auto",
@@ -45,14 +43,14 @@ export default function Navbar({ setTheme, theme }) {
               <Typography variant="h5">Server</Typography>
             </Button>
           </Link>
-          <IconButton
-            edge="end"
-            className={classes.menuButton}
-            color="inherit"
-            onClick={() => setTheme(!theme)}
-          >
+          <IconButton color="inherit" onClick={() => setTheme(!theme)}>
             {theme ? <Brightness7Icon /> : <Brightness4Icon />}
           </IconButton>
+          <Link href="https://github.com/Luj8n/atlas">
+            <IconButton edge="end" color="inherit">
+              <GitHubIcon />
+            </IconButton>
+          </Link>
         </Toolbar>
       </AppBar>
     </div>
