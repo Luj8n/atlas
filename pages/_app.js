@@ -15,6 +15,7 @@ Router.events.on("routeChangeStart", (url) => {
 });
 Router.events.on("routeChangeComplete", () => NProgress.done());
 Router.events.on("routeChangeError", () => NProgress.done());
+NProgress.configure({ showSpinner: false });
 
 export default function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState(undefined); // true => light; false => dark
